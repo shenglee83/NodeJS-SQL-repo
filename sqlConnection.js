@@ -25,6 +25,7 @@ app.use(express.static(__dirname + '/node_modules'));
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
+	console.log('Hello');
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
@@ -79,4 +80,6 @@ app.post("/create_review", function(req, res) {
 
 });
 
-app.listen(8081);
+app.listen(8081, function(){
+	console.log('example app listening to port 8081');
+});
