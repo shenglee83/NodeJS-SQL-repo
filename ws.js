@@ -13,7 +13,7 @@ app.use(function (req, res) {
 wss.on('connection', function connection(ws) {
   var location = url.parse(ws.upgradeReq.url, true);
 
-  ws.on('message', function incoming(message) {
+  ws.on('message', function (message) {
     console.log('received: %s', message);
   });
  
